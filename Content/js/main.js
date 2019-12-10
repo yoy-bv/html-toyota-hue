@@ -441,25 +441,7 @@
     $(".content-tab").css("display", "none");
     $("#tab_cp_02").css("display", "block");
   });
-
-
-
-  
-
-// click select item
-
-// $(".collapsible-header").click(function() {
-//     if($(this).hasClass("active")) {
-//         $(this).removeClass("active");
-//         $(this).parent("li").removeClass("active");
-//         $(this).parent("li").find("collapsible-body").css("display", "block");
-//     } else {
-//         $(this).addClass("active");
-//         $(this).parent("li").addClass("active");
-//         $(this).parent("li").find("collapsible-body").css("display", "none");
-//     }
-// });
-// });
+});
 
 function text_logo_Scale() {
     var text1 = $(".logo_mb .logo-text").text().replace(/TOYOTA/g, "").trim();
@@ -1209,4 +1191,42 @@ function FormatNumber(obj) {
         num = num.substring(0, num.length - (4 * i + 3)) + ',' +
             num.substring(num.length - (4 * i + 3));
     return (((sign) ? '' : '-') + num);
+}
+
+
+// =================== Include header - footer
+window.onload = function() {
+    var elements = document.getElementsByTagName('*'),
+        i;
+    for (i in elements) {
+        if (elements[i].hasAttribute && elements[i].hasAttribute('data-include')) {
+            fragment(elements[i], elements[i].getAttribute('data-include'));
+        }
+    }
+    function fragment(el, url) {
+        var localTest = /^(?:file):/,
+            xmlhttp = new XMLHttpRequest(),
+            status = 0;
+
+        xmlhttp.onreadystatechange = function() {
+            /* if we are on a local protocol, and we have response text, we'll assume
+ *                  things were sucessful */
+            if (xmlhttp.readyState == 4) {
+                status = xmlhttp.status;
+            }
+            if (localTest.test(location.href) && xmlhttp.responseText) {
+                status = 200;
+            }
+            if (xmlhttp.readyState == 4 && status == 200) {
+                el.outerHTML = xmlhttp.responseText;
+            }
+        }
+
+        try { 
+            xmlhttp.open("GET", url, true);
+            xmlhttp.send();
+        } catch(err) {
+            /* todo catch error */
+        }
+    }
 }
