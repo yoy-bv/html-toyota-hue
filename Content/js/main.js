@@ -440,6 +440,8 @@
     $("#tabMain02").find("a").addClass("active");
     $(".content-tab").css("display", "none");
     $("#tab_cp_02").css("display", "block");
+    $("#thong_so_ky_thuat ul li.tab_dt_tongquan a").addClass("active");
+    $("#tab_dt_tongquan").css("display", "block");
   });
 });
 

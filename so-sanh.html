@@ -1886,7 +1886,7 @@
       </div>
     </div>
   </div>
-  <div id="content" ng-controller="CompareController" class="sosanh">
+  <div id="content"class="sosanh">
     <div class="container page_compare tool_pg">
       <div class="compare_tabs">
         <div class="tabs_lg">
@@ -1931,7 +1931,7 @@
                       </div>
                       <div class="inner-box">
                         <div class="ttl">Bộ lọc</div>
-                        <ul class="collapsible collapsible-accordion" data-collapsible="expandable">
+                        <ul class="collapsible collapsible-accordion" >
                           <li>
                             <a class="collapsible-header active"><span>Mẫu xe</span></a>
                             <div class="collapsible-body" style="display: block;">
@@ -2269,89 +2269,2936 @@
             </p>
 
           </div>
-          <div class="list_cate_selected" id="list_cate_selected">
+        <div class="list_cate_selected" id="list_cate_selected">
             <div class="target target_compare sticky">
-              <div class="container">
-                <div class="list-cate all list_compare">
-                  <ul>
-                    <li class="item" ng-repeat="item in CarCompares" on-finish-render-compare="ngRepeatFinishedCompareSelected">
-                      <div class="inner res_block">
-                        <div class="sm_checkbox">
-                          <input type="checkbox" data-carId="{{item.carId}}" class="ckCompareCarChecked" ng-change="restartCompare()" data-caturl="{{item.catUrl}}" ng-model="CarCompares[$index].checked" id="checkbox-sl-0{{$index + 1}}" checked>
-                          <label class="nameValue" for="checkbox-sl-0{{$index + 1}}">
-                            <span class="img">
-                              <img src="%7b%7bitem.html" />
-                            </span>
-                            <span class="txt">
-                              <span class="txt1"><span class="check"></span></span>
-                              <span class="txt2">
-                                <span class="name">{{item.carName}}</span>
-                                <span class="price" ng-show="item.carPrice == 0">
-                                  Sẽ cập nhật sau
-                                </span>
-                                <span class="price" ng-show="item.carPrice != 0">
-                                  {{item.carPrice}} <sup>{{MoneyUnit}}</sup>
-                                </span>
-                              </span>
+                <div class="container">
+                    <div class="list-cate all list_compare">
+                        <ul>
+                            <li class="item ">
+                                <div class="inner res_block">
 
-                            </span>
-                          </label>
-                        </div>
-                        <p class="link-buid" ng-show="item.carId > 0">
-                        <a ng-href="/du-toan-chi-phi/?car={{item.carUrl}}">Dự toán</a>
-                        <span class="break-side break-side{{item.carId}}">|</span>
-                        <a class="test-drive-link test-drive-link{{item.carId}}" ng-href="/dang-ky-lai-thu/?cat={{item.catUrl}}">Đăng ký lái thử</a>
-                      </p>
+                                    <div class="sm_checkbox">
+                                        <input type="checkbox" data-carid="3805" class="ckCompareCarChecked ng-pristine ng-untouched ng-valid ng-not-empty" data-caturl="yaris" id="checkbox-sl-01" checked="">
+                                        <label class="nameValue" for="checkbox-sl-01">
+                                            <span class="img">
+                                      <img src="/data/news/3805/4modfh.png">
+                                    </span>
+                                            <span class="txt">
+                                      <span class="txt1"><span class="check"></span></span>
+                                            <span class="txt2">
+                                        <span class="name ng-binding">Yaris 1.5G CVT</span>
+                                            <span class="price ng-hide">
+                                          Sẽ cập nhật sau
+                                        </span>
+                                            <span class="price ng-binding">
+                                          650.000.000 <sup>VND</sup>
+                                        </span>
+                                            </span>
 
+                                            </span>
+
+                                        </label>
+                                    </div>
+                                    <p class="link-buid" ng-show="item.carId > 0">
+
+                                        <ahref="/du-toan-chi-phi/?car=yaris-1-5g-cvt">Dự toán</a>
+                                        <span class="break-side break-side3805 hide">|</span>
+                                        <a class="test-drive-link test-drive-link3805 hide" href="/dang-ky-lai-thu/?cat=yaris">Đăng ký lái thử</a>
+                                    </p>
+
+                                </div>
+                            </li>
+                            <li class="item ">
+                                <div class="inner res_block">
+
+                                    <div class="sm_checkbox">
+                                        <input type="checkbox" data-carid="3951" class="ckCompareCarChecked ng-pristine ng-untouched ng-valid ng-not-empty"id="checkbox-sl-02" checked="">
+                                        <label class="nameValue" for="checkbox-sl-02">
+                                            <span class="img">
+                                      <img src="/data/news/3951/kfe4g2.png">
+                                    </span>
+                                            <span class="txt">
+                                      <span class="txt1"><span class="check"></span></span>
+                                            <span class="txt2">
+                                        <span class="name ng-binding">Wigo 4AT</span>
+                                            <span class="price ng-hide">
+                                          Sẽ cập nhật sau
+                                        </span>
+                                            <span class="price ng-binding">
+                                          405.000.000 <sup class="ng-binding">VND</sup>
+                                        </span>
+                                            </span>
+
+                                            </span>
+
+                                        </label>
+                                    </div>
+
+                                    <p class="link-buid">
+                                        <a href="/du-toan-chi-phi/?car=wigo-4at">Dự toán</a>
+                                        <span class="break-side break-side3951">|</span>
+                                        <a class="test-drive-link test-drive-link3951" href="/dang-ky-lai-thu/?cat=wigo">Đăng ký lái thử</a>
+                                    </p>
+
+                                </div>
+                            </li>
+                            <!-- end ngRepeat: item in CarCompares -->
+                        </ul>
                     </div>
-                  </li>
-                </ul>
-              </div>
+                </div>
             </div>
-          </div>
         </div>
         <div class="box_tabs thong_so_ky_thuat" id="thong_so_ky_thuat">
-          <div class="cp-tabs">
-            <div class="target target3">
-              <div class="inner_tg3">
-                <ul class="tabs tabs-fixed-width spec_cmp">
-                  <li class="tab ng-scope li_fs"><a href="#tab_dt_tongquan">Tổng quan</a></li>
-                  <li class="tab" ng-repeat="item in ListSpec | filter:{spE_G_RANK:1}">
-                    <a href="#tab_dt_0{{$index + 1}}">{{item.spE_G_NAME}}</a>
-                  </li>
-                </ul>
-              </div>
+            <div class="cp-tabs">
+                <div class="target target3">
+                    <div class="inner_tg3">
+                        <ul class="tabs tabs-fixed-width" style="width: 100%;">
+                            <li class="tab tab_dt_tongquan"><a href="#tab_dt_tongquan" class="active">Tổng quan</a></li>
+                            <li class="tab">
+                                <a href="#tab_dt_01" class="">Động cơ &amp; Khung xe</a>
+                            </li>
+                            <li class="tab">
+                                <a href="#tab_dt_02" class="">Ngoại thất</a>
+                            </li>
+                            <li class="tab">
+                                <a href="#tab_dt_03" class="">Nội thất</a>
+                            </li>
+                            <li class="tab">
+                                <a href="#tab_dt_04" class="">Ghế</a>
+                            </li>
+                            <li class="tab">
+                                <a href="#tab_dt_05" class="">Tiện nghi</a>
+                            </li>
+                            <li class="tab">
+                                <a href="#tab_dt_06" class="">An ninh</a>
+                            </li>
+                            <li class="tab">
+                                <a href="#tab_dt_07" class="">An toàn chủ động</a>
+                            </li>
+                            <li class="tab">
+                                <a href="#tab_dt_08" class="">An toàn bị động</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div id="tab_dt_tongquan" class="content-tab">
-            <div class="inner res_block">
-              <table class="tbltk striped">
-                <tbody id="tbodyTongQuan"></tbody>
-              </table>
-            </div>
-          </div>
-          <div id="tab_dt_0{{$index + 1}}" class="content-tab" ng-repeat="item in ListSpec | filter: {spE_G_RANK:1}">
-            <div class="inner res_block">
-              <table class="tbltk striped">
-                <tbody>
-                  <tr ng-repeat="item2 in ListSpecDetail | filter: {parentId:item.id}" on-finish-render-compare="ngRepeatFinishedSpecSelected">
-                    <td class="rowlst">{{item2.rank2Name}}</td>
-                    <td>{{item2.rand3Name}} <i>{{item2.rand3Plus != "" ? "(" + item2.rand3Plus + ")" : ""}}</i></td>
-                    <td></td>
-                    <td>
-                      <table>
-                        <tbody>
-                          <tr>
-                            <td ng-repeat="value in item2.values" style="font-weight: normal">{{value.value}}</td>
-                          </tr>
+            <div id="tab_dt_tongquan" class="content-tab" style="display: block;">
+                <div class="inner res_block">
+                    <table class="tbltk striped">
+                        <tbody id="tbodyTongQuan">
+                            <tr>
+                                <td class="rowlst tqrowlst">Số chỗ ngồi</td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr class="tqtablelst0">
+                                                <td style="font-weight: normal">5 chỗ</td>
+                                                <td style="font-weight: normal">5 chỗ</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="rowlst tqrowlst">Kiểu dáng</td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr class="tqtablelst1">
+                                                <td style="font-weight: normal">Hatchback</td>
+                                                <td style="font-weight: normal">Hatchback</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="rowlst tqrowlst">Nhiên liệu</td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr class="tqtablelst2">
+                                                <td style="font-weight: normal">Xăng</td>
+                                                <td style="font-weight: normal">Xăng</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="rowlst tqrowlst">Xuất xứ</td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr class="tqtablelst3">
+                                                <td style="font-weight: normal">Xe nhập khẩu</td>
+                                                <td style="font-weight: normal">Xe nhập khẩu</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
                         </tbody>
-                      </table>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                    </table>
+                </div>
             </div>
-          </div>
+            <div id="tab_dt_01" class="content-tab " style="display: none;">
+                <div class="inner res_block">
+                    <table class="tbltk striped">
+                        <tbody>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Kích thước</td>
+                                <td class="ng-binding">Kích thước tổng thể bên ngoài (D x R x C) <i class="ng-binding">(mm x mm x mm)</i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">4145 x 1730 x 1500</td>
+                                                <td style="font-weight: normal" class="ng-binding ">3660 x 1600 x 1520</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Kích thước tổng thể bên trong (D x R x C) <i class="ng-binding">(mm x mm x mm)</i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">-</td>
+                                                <td style="font-weight: normal" class="ng-binding ">1940 x 1365 x 1235</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Chiều dài cơ sở <i class="ng-binding">(mm)</i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">2550</td>
+                                                <td style="font-weight: normal" class="ng-binding ">2455</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Chiều rộng cơ sở (Trước/ sau) <i class="ng-binding">(mm)</i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">1460/1445</td>
+                                                <td style="font-weight: normal" class="ng-binding ">1410/1405</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Khoảng sáng gầm xe <i class="ng-binding">(mm)</i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">135</td>
+                                                <td style="font-weight: normal" class="ng-binding ">160</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Góc thoát (Trước/Sau) <i class="ng-binding">(độ/degree)</i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">N/A</td>
+                                                <td style="font-weight: normal" class="ng-binding ">N/A</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Bán kính vòng quay tối thiểu <i class="ng-binding">(m)</i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">5.7</td>
+                                                <td style="font-weight: normal" class="ng-binding ">4,7</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Trọng lượng không tải <i class="ng-binding">(kg)</i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">1120</td>
+                                                <td style="font-weight: normal" class="ng-binding ">890</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Trọng lượng toàn tải <i class="ng-binding">(kg)</i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">1550</td>
+                                                <td style="font-weight: normal" class="ng-binding ">1290</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Dung tích bình nhiên liệu <i class="ng-binding">(L)</i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">42</td>
+                                                <td style="font-weight: normal" class="ng-binding ">33</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Dung tích khoang hành lý <i class="ng-binding">(L)</i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">326</td>
+                                                <td style="font-weight: normal" class="ng-binding ">-</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Kích thước khoang chở hàng (D x R x C) <i class="ng-binding">(mm)</i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">N/A</td>
+                                                <td style="font-weight: normal" class="ng-binding ">-</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Động cơ</td>
+                                <td class="ng-binding">Loại động cơ <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">2NR-FE (1.5L)</td>
+                                                <td style="font-weight: normal" class="ng-binding ">3NR-VE (1.2L)</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Số xy lanh <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">4</td>
+                                                <td style="font-weight: normal" class="ng-binding ">4</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Bố trí xy lanh <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Thẳng hàng/In line</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Thẳng hàng/In line</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Dung tích xy lanh <i class="ng-binding">(cc)</i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">1496</td>
+                                                <td style="font-weight: normal" class="ng-binding ">1197</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Tỉ số nén <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">-</td>
+                                                <td style="font-weight: normal" class="ng-binding ">11,5</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Hệ thống nhiên liệu <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Phun xăng điện tử/Electronic fuel injection</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Phun xăng điện tử/ Electronic fuel injection</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Loại nhiên liệu <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Xăng/Petrol</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Xăng/Petrol</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Công suất tối đa <i class="ng-binding">((KW (HP)/ vòng/phút))</i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">(79)107@ 6000</td>
+                                                <td style="font-weight: normal" class="ng-binding ">(64)/86@6000</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Mô men xoắn tối đa <i class="ng-binding">(Nm @ vòng/phút)</i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">140@4200</td>
+                                                <td style="font-weight: normal" class="ng-binding ">107 @ 4200</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Tiêu chuẩn khí thải <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Euro 4</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Euro 4</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Hệ thống ngắt/ mở động cơ tự động <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Chế độ lái</td>
+                                <td class="ng-binding">Chế độ lái <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Hệ thống truyền động</td>
+                                <td class="ng-binding">Hệ thống truyền động <i class="ng-binding">()</i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Dẫn động cầu trước/FWD</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Dẫn động cầu trước/FWD</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Hộp số</td>
+                                <td class="ng-binding">Hộp số <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Số tự động vô cấp/ CVT</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Số tự động 4 cấp/4AT</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Hệ thống treo</td>
+                                <td class="ng-binding">Trước <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Mc Pherson/Mc Pherson Struts</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Macpherson</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Sau <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Thanh xoắn/Torsion beam</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Phụ thuộc, Dầm xoắn</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Hệ thống lái</td>
+                                <td class="ng-binding">Trợ lực tay lái <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Điện/Electric</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Điện/Power</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Hệ thống tay lái tỉ số truyền biến thiên (VGRS) <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Vành &amp; lốp xe</td>
+                                <td class="ng-binding">Loại vành <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Mâm đúc/Alloy</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Mâm đúc/Alloy</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Kích thước lốp <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">195/50 R16</td>
+                                                <td style="font-weight: normal" class="ng-binding ">175/65R14</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Lốp dự phòng <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">195/50 R16, Mâm đúc/Alloy</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Thép/Steel</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Phanh</td>
+                                <td class="ng-binding">Trước <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Đĩa tản nhiệt 15'' / Ventilated disc 15''</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Đĩa tản nhiệt 13"/Ventilated disc 13"</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Sau <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Đĩa đặc 15"/Solid disc 15"</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Tang trống/Drum</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Tiêu thụ nhiên liệu</td>
+                                <td class="ng-binding">Kết hợp <i class="ng-binding">(L/100km)</i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">5,7</td>
+                                                <td style="font-weight: normal" class="ng-binding ">5,3</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Trong đô thị <i class="ng-binding">(L/100km)</i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">7</td>
+                                                <td style="font-weight: normal" class="ng-binding ">6,87</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Ngoài đô thị <i class="ng-binding">(L/100km)</i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">4.9</td>
+                                                <td style="font-weight: normal" class="ng-binding ">4,36</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Chất liệu bọc ghế</td>
+                                <td class="ng-binding">Chất liệu bọc ghế <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Da/Leather</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Nỉ/Fabric</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Ghế trước</td>
+                                <td class="ng-binding">Loại ghế <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Thường/Normal</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Thường/Normal</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Điều chỉnh ghế lái <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Chỉnh tay 6 hướng/6 way manual</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Chỉnh tay 4 hướng/4 way manual</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Điều chỉnh ghế hành khách <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Chỉnh tay 4 hướng/4 way manual</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Chỉnh tay 4 hướng/4 way manual</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Bộ nhớ vị trí <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding "></td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Chức năng thông gió <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Chức năng sưởi <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Ghế sau</td>
+                                <td class="ng-binding">Hàng ghế thứ hai <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Gập lưng ghế 60:40/ 60:40 Spilt fold</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Gập lưng ghế/Fold</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Hàng ghế thứ ba <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding "></td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Hàng ghế thứ bốn <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding "></td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Hàng ghế thứ năm <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding "></td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Tựa tay hàng ghế sau <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding "></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="tab_dt_02" class="content-tab " style="display: none;">
+                <div class="inner res_block">
+                    <table class="tbltk striped">
+                        <tbody>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Cụm đèn trước</td>
+                                <td class="ng-binding">Đèn chiếu gần <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Halogen projector</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Halogen dạng bóng chiếu/ Halogen projector</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Đèn chiếu xa <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Halogen reflector</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Halogen phản xạ đa hướng/ Halogen reflector</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Đèn chiếu sáng ban ngày <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With (LED)</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Hệ thống rửa đèn <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Hệ thống điều khiển đèn tự động <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Hệ thống nhắc nhở đèn sáng <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Hệ thống mở rộng góc chiếu tự động <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Hệ thống cân bằng góc chiếu <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Chế độ đèn chờ dẫn đường <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Cụm đèn sau</td>
+                                <td class="ng-binding">Cụm đèn sau <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">LED</td>
+                                                <td style="font-weight: normal" class="ng-binding ">LED</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Đèn báo phanh trên cao</td>
+                                <td class="ng-binding">Đèn báo phanh trên cao <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có (LED)/ Có/With (LED)</td>
+                                                <td style="font-weight: normal" class="ng-binding ">LED</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Đèn sương mù</td>
+                                <td class="ng-binding">Trước <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Sau <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Gương chiếu hậu ngoài</td>
+                                <td class="ng-binding">Chức năng điều chỉnh điện <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Chức năng gập điện <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Tích hợp đèn báo rẽ <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Tích hợp đèn chào mừng <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Màu <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Cùng màu thân xe/Colored</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Cùng màu thân xe/Body color</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Chức năng tự điều chỉnh khi lùi <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Bộ nhớ vị trí <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Chức năng sấy gương <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Chức năng chống bám nước <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Chức năng chống chói tự động <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Gạt mưa</td>
+                                <td class="ng-binding">Trước <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Gián đoạn (điều chỉnh thời gan) Intermittent (Time adjustment + Mist)</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Gián đoạn/intermittent</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Sau <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có (liên tục)/With (without intermittent)</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Gián đoạn/intermittent</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Chức năng sấy kính sau</td>
+                                <td class="ng-binding">Chức năng sấy kính sau <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Ăng ten</td>
+                                <td class="ng-binding">Ăng ten <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Vây cá/Shark fin</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Dạng thường/Piller</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Tay nắm cửa ngoài</td>
+                                <td class="ng-binding">Tay nắm cửa ngoài <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Mạ/Plating</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Cùng màu thân xe/Body color</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Bộ quây xe thể thao</td>
+                                <td class="ng-binding">Bộ quây xe thể thao <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Thanh cản (giảm va chạm)</td>
+                                <td class="ng-binding">Trước <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Cùng màu thân xe/Colored</td>
+                                                <td style="font-weight: normal" class="ng-binding "></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Sau <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Cùng màu thân xe/Colored</td>
+                                                <td style="font-weight: normal" class="ng-binding "></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Cản xe</td>
+                                <td class="ng-binding">Trước <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">-</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Cùng màu thân xe/Colored</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Sau <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">-</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Cùng màu thân xe/Colored</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Lưới tản nhiệt</td>
+                                <td class="ng-binding">Trước <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Mạ/Plating</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Mạ/Plating</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Sau <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">-</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Cánh hướng gió sau</td>
+                                <td class="ng-binding">Cánh hướng gió sau <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding "></td>
+                                                <td style="font-weight: normal" class="ng-binding ">-</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Chắn bùn</td>
+                                <td class="ng-binding">Chắn bùn <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Ống xả kép</td>
+                                <td class="ng-binding">Ống xả kép <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Cánh hướng gió nóc xe</td>
+                                <td class="ng-binding">Cánh hướng gió nóc xe <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">-</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Thanh đỡ nóc xe</td>
+                                <td class="ng-binding">Thanh đỡ nóc xe <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Chất liệu bọc ghế</td>
+                                <td class="ng-binding">Chất liệu bọc ghế <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Da/Leather</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Nỉ/Fabric</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Ghế trước</td>
+                                <td class="ng-binding">Loại ghế <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Thường/Normal</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Thường/Normal</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Điều chỉnh ghế lái <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Chỉnh tay 6 hướng/6 way manual</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Chỉnh tay 4 hướng/4 way manual</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Điều chỉnh ghế hành khách <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Chỉnh tay 4 hướng/4 way manual</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Chỉnh tay 4 hướng/4 way manual</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Bộ nhớ vị trí <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding "></td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Chức năng thông gió <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Chức năng sưởi <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Ghế sau</td>
+                                <td class="ng-binding">Hàng ghế thứ hai <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Gập lưng ghế 60:40/ 60:40 Spilt fold</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Gập lưng ghế/Fold</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Hàng ghế thứ ba <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding "></td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Hàng ghế thứ bốn <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding "></td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Hàng ghế thứ năm <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding "></td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Tựa tay hàng ghế sau <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding "></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="tab_dt_03" class="content-tab " style="display: none;">
+                <div class="inner res_block">
+                    <table class="tbltk striped">
+                        <tbody>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Tay lái</td>
+                                <td class="ng-binding">Loại tay lái <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">3 chấu/3-spoke</td>
+                                                <td style="font-weight: normal" class="ng-binding ">3 chấu/3-spoke</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Chất liệu <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Bọc da/leather</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Urethane</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Nút bấm điều khiển tích hợp <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Điều chỉnh âm thanh/Audio switch</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Âm thanh/Audio</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Điều chỉnh <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Chỉnh tay 2 hướng/Manual tilt</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Lẫy chuyển số <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Bộ nhớ vị trí <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Gương chiếu hậu trong</td>
+                                <td class="ng-binding">Gương chiếu hậu trong <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">2 chế độ ngày và đêm/Day &amp; Night</td>
+                                                <td style="font-weight: normal" class="ng-binding ">2 chế độ ngày và đêm/Day &amp; night</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Tay nắm cửa trong</td>
+                                <td class="ng-binding">Tay nắm cửa trong <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Mạ/Plating</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Mạ/Plating</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Cụm đồng hồ</td>
+                                <td class="ng-binding">Loại đồng hồ <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Optitron</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Analog</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Đèn báo chế độ Eco <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Chức năng báo lượng tiêu thụ nhiên liệu <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Chức năng báo vị trí cần số <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Màn hình hiển thị đa thông tin <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Cửa sổ trời</td>
+                                <td class="ng-binding">Cửa sổ trời <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Hệ thống âm thanh</td>
+                                <td class="ng-binding">Đầu đĩa <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">DVD 7" touch screen</td>
+                                                <td style="font-weight: normal" class="ng-binding ">DVD 7"</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Số loa <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">6</td>
+                                                <td style="font-weight: normal" class="ng-binding ">4</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Cổng kết nối AUX <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Cổng kết nối USB <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Kết nối Bluetooth <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Hệ thống điều khiển bằng giọng nói <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Bảng điều khiển từ hàng ghế sau <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Kết nối wifi <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Hệ thống đàm thoại rảnh tay <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Kết nối điện thoại thông minh <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Kết nối HDMI <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Hệ thống điều hòa</td>
+                                <td class="ng-binding">Trước <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Tư động/Auto</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Chỉnh tay/Manual</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Sau <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">-</td>
+                                                <td style="font-weight: normal" class="ng-binding "></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Hệ thống sạc không dây</td>
+                                <td class="ng-binding">Hệ thống sạc không dây <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="tab_dt_04" class="content-tab " style="display: none;">
+                <div class="inner res_block">
+                    <table class="tbltk striped">
+                        <tbody>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Chất liệu bọc ghế</td>
+                                <td class="ng-binding">Chất liệu bọc ghế <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Da/Leather</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Nỉ/Fabric</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Ghế trước</td>
+                                <td class="ng-binding">Loại ghế <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Thường/Normal</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Thường/Normal</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Điều chỉnh ghế lái <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Chỉnh tay 6 hướng/6 way manual</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Chỉnh tay 4 hướng/4 way manual</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Điều chỉnh ghế hành khách <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Chỉnh tay 4 hướng/4 way manual</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Chỉnh tay 4 hướng/4 way manual</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Bộ nhớ vị trí <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding "></td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Chức năng thông gió <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Chức năng sưởi <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Ghế sau</td>
+                                <td class="ng-binding">Hàng ghế thứ hai <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Gập lưng ghế 60:40/ 60:40 Spilt fold</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Gập lưng ghế/Fold</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Hàng ghế thứ ba <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding "></td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Hàng ghế thứ bốn <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding "></td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Hàng ghế thứ năm <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding "></td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Tựa tay hàng ghế sau <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding "></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="tab_dt_05" class="content-tab " style="display: none;">
+                <div class="inner res_block">
+                    <table class="tbltk striped">
+                        <tbody>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Rèm che nắng kính sau</td>
+                                <td class="ng-binding">Rèm che nắng kính sau <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Rèm che nắng cửa sau</td>
+                                <td class="ng-binding">Rèm che nắng cửa sau <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Cửa gió sau</td>
+                                <td class="ng-binding">Cửa gió sau <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Hộp làm mát</td>
+                                <td class="ng-binding">Hộp làm mát <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Chìa khóa thông minh &amp; khởi động bằng nút bấm</td>
+                                <td class="ng-binding">Chìa khóa thông minh &amp; khởi động bằng nút bấm <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Khóa cửa điện</td>
+                                <td class="ng-binding">Khóa cửa điện <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Chức năng khóa cửa từ xa</td>
+                                <td class="ng-binding">Chức năng khóa cửa từ xa <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Cửa sổ điều chỉnh điện</td>
+                                <td class="ng-binding">Cửa sổ điều chỉnh điện <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có (1 chạm và chống kẹt bên người lái)/With (Auto &amp; Jam protection for driver window)</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Có, tự động xuống ghế lái/With, Driver auto down</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Cốp điều khiển điện</td>
+                                <td class="ng-binding">Cốp điều khiển điện <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Hệ thống điều khiển hành trình</td>
+                                <td class="ng-binding">Hệ thống điều khiển hành trình <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="tab_dt_06" class="content-tab " style="display: none;">
+                <div class="inner res_block">
+                    <table class="tbltk striped">
+                        <tbody>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Hệ thống báo động</td>
+                                <td class="ng-binding">Hệ thống báo động <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Hệ thống mã hóa khóa động cơ</td>
+                                <td class="ng-binding">Hệ thống mã hóa khóa động cơ <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="tab_dt_07" class="content-tab " style="display: none;">
+                <div class="inner res_block">
+                    <table class="tbltk striped">
+                        <tbody>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Hệ thống chống bó cứng phanh</td>
+                                <td class="ng-binding">Hệ thống chống bó cứng phanh <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Hệ thống hỗ trợ lực phanh khẩn cấp</td>
+                                <td class="ng-binding">Hệ thống hỗ trợ lực phanh khẩn cấp <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Hệ thống phân phối lực phanh điện tử</td>
+                                <td class="ng-binding">Hệ thống phân phối lực phanh điện tử <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Hệ thống ổn định thân xe</td>
+                                <td class="ng-binding">Hệ thống ổn định thân xe <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Hệ thống kiểm soát lực kéo</td>
+                                <td class="ng-binding">Hệ thống kiểm soát lực kéo <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Hệ thống hỗ trợ khởi hành ngang dốc</td>
+                                <td class="ng-binding">Hệ thống hỗ trợ khởi hành ngang dốc <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Hệ thống hỗ trợ khởi hành đỗ đèo</td>
+                                <td class="ng-binding">Hệ thống hỗ trợ khởi hành đỗ đèo <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Hệ thống lựa chọn vận tốc vượt địa hình</td>
+                                <td class="ng-binding">Hệ thống lựa chọn vận tốc vượt địa hình <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Hệ thống thích nghi địa hình</td>
+                                <td class="ng-binding">Hệ thống thích nghi địa hình <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Đèn báo phanh khẩn cấp</td>
+                                <td class="ng-binding">Đèn báo phanh khẩn cấp <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Camera lùi</td>
+                                <td class="ng-binding">Camera lùi <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Cảm biến hỗ trợ đỗ xe</td>
+                                <td class="ng-binding">Sau <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                                <td style="font-weight: normal" class="ng-binding ">2</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Góc trước <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">0</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Góc sau <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">0</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="tab_dt_08" class="content-tab " style="display: none;">
+                <div class="inner res_block">
+                    <table class="tbltk striped">
+                        <tbody>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Túi khí</td>
+                                <td class="ng-binding">Túi khí người lái &amp; hành khách phía trước <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Túi khí bên hông phía trước <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Túi khí rèm <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Túi khí bên hông phía sau <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Túi khí đầu gối người lái <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding"></td>
+                                <td class="ng-binding">Túi khí đầu gối hành khách <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Không có/Without</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Khung xe GOA</td>
+                                <td class="ng-binding">Khung xe GOA <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                                <td style="font-weight: normal" class="ng-binding ">-</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Dây đai an toàn</td>
+                                <td class="ng-binding">Trước <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">3 điểm ELR, 5 vị trí/ 3 P ELR x5</td>
+                                                <td style="font-weight: normal" class="ng-binding ">3 điểm ELR, 5 vị trí/ 3 points ELRx5</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Ghế có cấu trúc giảm chấn thương cổ</td>
+                                <td class="ng-binding">Ghế có cấu trúc giảm chấn thương cổ <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                                <td style="font-weight: normal" class="ng-binding "></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Cột lái tự đổ</td>
+                                <td class="ng-binding">Cột lái tự đổ <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/ With</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="rowlst ng-binding">Bàn đạp phanh tự đổ</td>
+                                <td class="ng-binding">Bàn đạp phanh tự đổ <i class="ng-binding"></i></td>
+                                <td></td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-weight: normal" class="ng-binding ">Có/With</td>
+                                                <td style="font-weight: normal" class="ng-binding "></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
         <p class="btn_next btn_next_mb btn_next_fixed hide-pc">
           <a href="#frmSendMailTools" class="various btnSendEmail" data-target="SOSANHXEMOI">Nhận email</a>
@@ -2534,6 +5381,6 @@
 
     <script src="Content/js/main.js"></script>
     <!-- <script src="App/App/app.js"></script> -->
-    <script src="bundles/pages.js"></script>
+    <!-- <script src="bundles/pages.js"></script> -->
 </body>
 </html>
