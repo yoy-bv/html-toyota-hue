@@ -25908,8 +25908,6 @@ Materialize.elementOrParentIsFixed = function(n) {
 };
 Vel = $ ? $.Velocity : jQuery ? jQuery.Velocity : Velocity,
     function(n) {
-        console.log("-------------------------")
-        console.log(n)
         n.fn.collapsible = function(t) {
             return t = n.extend({
                 accordion: void 0
