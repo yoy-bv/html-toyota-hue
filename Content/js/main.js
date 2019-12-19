@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
 
-     
+
     // setSizeforVideoBanner();
 
     var pathname = window.location.pathname;
@@ -426,7 +426,7 @@
 
 
 
-// =============== 
+// ===============
 
 
   // $("#tabMain01").on("click", function () {
@@ -907,7 +907,7 @@ owlPro.owlCarousel({
     pullDrag: false,
     freeDrag: false,
     autoplay: owlPro.children().length > 3,
-    // autoplay: false, 
+    // autoplay: false,
     smartSpeed: 3000,
     animateOut: 'fadeOut'
 });
@@ -926,7 +926,7 @@ owlSer.owlCarousel({
     smartSpeed: 3000,
     //animateIn: 'fadeIn',
     // autoplayHoverPause: true,
-    animateOut: 'fadeOut' 
+    animateOut: 'fadeOut'
 });
 
 function hoverAndFunnySlideToyotaCar() {
@@ -1194,4 +1194,3 @@ function FormatNumber(obj) {
             num.substring(num.length - (4 * i + 3));
     return (((sign) ? '' : '-') + num);
 }
-
